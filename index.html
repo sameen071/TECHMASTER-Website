@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Techmaster Sri Lanka - Premium computer parts, mobile accessories, networking equipment and tech gadgets. Find the best gaming PCs and accessories.">
+    <title>Techmaster | Premium Tech & Gaming Accessories</title>
+
+    <!-- Boxicons for modern icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class='bx bxs-chip' style="color: var(--primary-color);"></i> TECHMASTER
+            </a>
+
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Store</a></li>
+                    <li><a href="#tracker">Repair Tracker</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin.html" style="color: var(--primary-color);"><i class='bx bx-cog'></i> Admin</a>
+                    </li>
+                    <li><a href="file:///C:/Users/Sameen_Praneeth/Desktop/Pos/simple_pos/index.html" target="_blank"
+                            class="pos-link" style="color: #ff007f;"><i class='bx bx-desktop'></i> POS System</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero / Slider Section -->
+    <section class="hero-slider" id="home">
+        <div class="slider-content">
+            <div class="slider-text">
+                <span
+                    style="color: var(--primary-color); font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Premium
+                    Tech Store</span>
+                <h1
+                    style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: #fff; line-height: 1.1; margin: 1rem 0;">
+                    Next Generation<br>Computing Components</h1>
+                <p style="color: #e0e0e0; font-size: 1.1rem; margin-bottom: 2rem; max-width: 500px;">Buy the latest
+                    computer parts, accessories, and tech gadgets at unbeatable prices in Sri Lanka. Enhance your setup
+                    today.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#products" class="btn btn-primary" style="padding: 0.8rem 2rem;">Shop Now</a>
+                    <a href="#tracker" class="btn btn-outline" style="padding: 0.8rem 2rem;">Repair Jobs</a>
+                </div>
+            </div>
+            <div class="slider-image">
+                <img src="https://plus.unsplash.com/premium_photo-1683318956948-2621741ef0b0?auto=format&fit=crop&q=80&w=600"
+                    alt="PC Setup"
+                    style="border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); width: 100%; max-width: 500px;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <!-- Filters -->
+        <div class="glass-panel filters-section">
+            <div class="form-control">
+                <label>Category</label>
+                <select id="filter-category" class="input-field">
+                    <option value="all">All Categories</option>
+                    <option value="Casings">Casings</option>
+                    <option value="Cooling">Cooling</option>
+                    <option value="Memory (RAM)">Memory (RAM)</option>
+                    <option value="Processors">Processors</option>
+                    <option value="Storage">Storage</option>
+                    <option value="Monitors">Monitors</option>
+                    <option value="Keyboard & Mouse">Keyboard & Mouse</option>
+                    <option value="Cables & Converters">Cables & Converters</option>
+                    <option value="Printers">Printers</option>
+                    <option value="Accessories">Accessories</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label>Condition</label>
+                <select id="filter-condition" class="input-field">
+                    <option value="all">Any Condition</option>
+                    <option value="Brand New">Brand New</option>
+                    <option value="Used/Refurbished">Used/Refurbished</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label>Search Products</label>
+                <div style="position: relative;">
+                    <i class='bx bx-search'
+                        style="position: absolute; left: 10px; top: 12px; color: var(--text-secondary);"></i>
+                    <input type="text" id="search-input" class="input-field" placeholder="Search by brand, name..."
+                        style="padding-left: 35px; width: 100%;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-container" id="products-grid">
+            <!-- Products will be dynamically injected here by app.js -->
+        </div>
+    </section>
+
+    <!-- Repair Tracker Section -->
+    <section class="repair-tracker glass-panel" id="tracker">
+        <h2>Repair Status Tracker</h2>
+        <p style="color: var(--text-secondary); margin-top: 1rem;">Enter your Job Card Number to check the real-time
+            status of your repair.</p>
+
+        <form class="tracker-form" id="tracker-form" onsubmit="event.preventDefault(); window.checkRepairStatus();">
+            <input type="text" id="job-card-input" class="input-field" placeholder="e.g. JM-5001" required>
+            <button type="submit" class="btn btn-primary"><i class='bx bx-search-alt-2'></i> Track Status</button>
+        </form>
+
+        <div id="tracker-result">
+            <!-- Tracker dynamic contents -->
+        </div>
+    </section>
+
+    <!-- Footer & Contact -->
+    <footer id="contact">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3><i class='bx bxs-chip'></i> TECHMASTER</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">Providing the best technology solutions
+                    and repair services in Sri Lanka with unmatched reliability.</p>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class='bx bxl-facebook-square'></i></a>
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class='bx bxl-instagram-alt'></i></a>
+                    <a href="#" style="color: white; font-size: 1.5rem;"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class='bx bx-map' style="color: var(--primary-color);"></i> 245/A/1 Ranaviru helasiri Mawatha
+                        Borogawatta Minuwangoda</li>
+                    <li><i class='bx bx-phone' style="color: var(--primary-color);"></i> 071 792 8904</li>
+                    <li><i class='bx bx-envelope' style="color: var(--primary-color);"></i> info@techmaster.lk</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Find Us Here</h3>
+                <!-- Dark mode filtered google maps iframe -->
+                <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.91!2d79.85!3d6.89!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTMnMjQuMCJOIDc5wrDUoScwMC4wIkU!5e0!3m2!1sen!2slk!4v1614000000000!5m2!1sen!2slk"
+                    loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Techmaster Sri Lanka. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
